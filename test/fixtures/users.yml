@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  typeOfUser: MyString
+  borrowedBooks: MyString
+
+two:
+  name: MyString
+  typeOfUser: MyString
+  borrowedBooks: MyString
