@@ -36,6 +36,7 @@ class AuthorsController < ApplicationController
   # DELETE /authors/1
   def destroy
     @author.destroy
+    render json: {message:"Author deleted!"}, status: :ok
   end
 
   private

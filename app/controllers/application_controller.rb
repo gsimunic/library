@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  rescue_from ActiveRecord::RecordNotDestroyed, with: :destroy_failed
+    rescue_from ActiveRecord::RecordNotFound, with: :destroy_failed
 
 
 
@@ -13,6 +13,6 @@ class ApplicationController < ActionController::API
     private
 
     def destroy_failed(ex)
-        render json: {errors: ex.record.errors}, status: :unprocessable_entity
+        render json: {error:"Nothing to delete, user not found"}, status: :unprocessable_entity
     end   
 end
