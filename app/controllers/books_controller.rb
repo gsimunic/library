@@ -1,11 +1,12 @@
 class BooksController < ApplicationController
+
   before_action :set_book, only: %i[ show update destroy ]
 
   # GET /books
   def index
     @books = Book.all
 
-    render json: @books, only: [:title,:author,:quantity]
+    render json: @books, only: [:title,:author,:quantity,:id]
   end
 
   # GET /books/1
@@ -36,6 +37,7 @@ class BooksController < ApplicationController
   # DELETE /books/1
   def destroy
     @book.destroy
+    render json: {}, status: :ok
   end
 
   private

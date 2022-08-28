@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :users
-  resources :books 
+  resources :books
   resources :authors
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
